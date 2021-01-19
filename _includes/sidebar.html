@@ -10,25 +10,34 @@
     </div>
 
     <nav class="sidebar-nav">
-        <ul class="nav">
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
-      
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            {% if node.mostra != "nao" %}
-                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+      <ul class="nav">
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+              {% if node.mostra != "nao" %}
+                  <li><a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a></li>
+              {% endif %}
             {% endif %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
-      
+        {% endfor %}
+      </ul>
     </nav>
+
+    <div id="icons">
+      <div class="inline-icons">
+        <a href="http://www.linkedin.com/in/lucas-fern"><img src="res/linkedin.png" alt="linkedin" width="30" height="30"></a>
+      </div>
+    
+      <div class="inline-icons">
+        <a href="https://github.com/lucas-fern"><img src="res/github.png" alt="github" width="30" height="30"></a>
+      </div>
+    </div>
 
 {% comment %}
 uncomment to show Twitter feed on sidebar

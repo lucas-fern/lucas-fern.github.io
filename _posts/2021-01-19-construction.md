@@ -5,7 +5,7 @@ title: Site Under Construction
 # Test H1
 ## Test H2
 ### Test H3
-Body content
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 {% highlight python %}
 import os
@@ -69,7 +69,7 @@ class SentencesIterator():
     and not run out of memory; I stole this code
     from here: 
 
-    https://jacopofarina.eu/posts/gensim-generator-is-not-iterator/
+    https://jacopofarina.eu/posts/gensim-generator-is-not-iterator
     '''
     def __init__(self, generator_function):
         self.generator_function = generator_function
@@ -98,4 +98,5 @@ model = Word2Vec(
 
 # save to disk
 model.save('word2vec.model')
+ 
 {% endhighlight %}

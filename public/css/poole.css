@@ -48,11 +48,11 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
-@media (min-width: 38em) {
+@media (min-width:55em) {
   html {
     font-size: 20px;
   }
@@ -109,6 +109,7 @@ p {
   margin-bottom: 1rem;
   font-size: 0.9rem;
   color: #DFE3E8;
+  font-weight: 300;
 }
 
 strong {
@@ -120,6 +121,7 @@ strong {
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  margin-left: 0em;
 }
 
 dt {
@@ -155,30 +157,26 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 code {
-  padding: .25em .5em;
-  font-size: 85%;
-  color: #bf616a;
-  background-color: #f9f9f9;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 pre {
   display: block;
   margin-top: 0;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: .8rem;
-  line-height: 1.4;
+  padding: 0;
+  font-size: .75rem;
+  line-height: 1.2;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
   background-color: #333A45;
+  margin-left: -2em;
 }
 pre code {
-  padding: 0;
+  padding: 1em;
   font-size: 100%;
   color: inherit;
-  background-color: transparent;
+  background-color:  #333A45;
 }
 
 /* Pygments via Jekyll */
@@ -192,7 +190,7 @@ pre code {
 
 /* Gist via GitHub Pages */
 .gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
+  font-family: 'Roboto', sans-serif;
 }
 .gist .markdown-body {
   padding: 15px;
@@ -288,7 +286,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  max-width: 38rem;
+  max-width: 55rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -333,6 +331,7 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+  max-width: 55em;
 }
 
 /* Blog post or page title */
@@ -353,6 +352,7 @@ tbody tr:nth-child(odd) th {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #919CAC;
+  font-weight: 300;
 }
 
 /* Related posts */
@@ -392,7 +392,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #919CAC;
   text-align: center;
 }
