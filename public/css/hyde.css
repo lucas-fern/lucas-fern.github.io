@@ -56,8 +56,8 @@ html {
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
+  color: #939EAE;
+  background-color: #333A45;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -72,12 +72,12 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #F44C7F;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #939EAE;
   margin-top: 0;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 3.25rem;

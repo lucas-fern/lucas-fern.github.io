@@ -8,17 +8,18 @@ kramdown:
 permalink:        pretty
 
 # Setup
-title:            Thiago Marzagão
-tagline:          'A Jekyll theme'
-description:      'data, code, etc'
-url:              http://thiagomarzagao.github.io
+title:            Lucas Fern  
+tagline:          '🧙'
+description:      'Student'
+url:              http://lucas-fern.github.io
 baseurl:          ""
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Lucas Fern'
+  url:            https://github.com/lucas-fern
 
 #gems:             [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate:         5
 
 # Custom vars

@@ -60,14 +60,14 @@ html {
 
 body {
   color: #515151;
-  background-color: #fff;
+  background-color: #2E343E;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: #23c2e2;
   text-decoration: none;
 }
 a strong {
@@ -84,33 +84,35 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #313131;
+  color: #F44C7F;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 h4, h5, h6 {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Body text */
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #DFE3E8;
 }
 
 strong {
-  color: #303030;
+  color: #F44C7F;
 }
 
 
@@ -170,7 +172,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
+  background-color: #333A45;
 }
 pre code {
   padding: 0;
@@ -308,10 +310,10 @@ tbody tr:nth-child(odd) th {
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: #505050;
+  color: #F44C7F;
 }
 .masthead-title a {
-  color: #505050;
+  color: #F44C7F;
 }
 .masthead-title small {
   font-size: 75%;
@@ -337,7 +339,8 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #F0D514;
+  font-size: 2.5rem;
 }
 .page-title,
 .post-title {
@@ -349,7 +352,7 @@ tbody tr:nth-child(odd) th {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: #919CAC;
 }
 
 /* Related posts */
@@ -367,7 +370,7 @@ tbody tr:nth-child(odd) th {
 }
 .related-posts li small {
   font-size: 75%;
-  color: #999;
+  color: #919CAC;
 }
 .related-posts li a:hover {
   color: #268bd2;
@@ -390,7 +393,7 @@ tbody tr:nth-child(odd) th {
   margin-left: -1rem;
   margin-right: -1rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  color: #ccc;
+  color: #919CAC;
   text-align: center;
 }
 
@@ -398,7 +401,7 @@ tbody tr:nth-child(odd) th {
 .pagination-item {
   display: block;
   padding: 1rem;
-  border: 1px solid #eee;
+  border: 1px solid #919CAC;
 }
 .pagination-item:first-child {
   margin-bottom: -1px;

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: index
+title: Index
 ---
 
 <ul>
