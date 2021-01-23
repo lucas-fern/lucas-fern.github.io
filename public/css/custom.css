@@ -1,0 +1,41 @@
+.portrait {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    width: 25%;
+}
+
+.UoM {
+    color: #0071e9;
+}
+
+.follows-heading {
+    margin-top: -.5rem;
+}
+
+#UoM-Logo {
+    float: left;
+    margin-right: 15px;
+    margin-top: 5px;
+    width: 12%;
+}
+
+.date {
+    display: block;
+    margin-top: -.5rem;
+    margin-bottom: 0rem;
+    color: #919CAC;
+    font-weight: 300;
+}
+
+.inline {
+    display: inline-block;
+}
+
+#jun-eng {
+    color: #FF9933;
+}
+
+.white {
+    color: #DFE3E8;
+}
