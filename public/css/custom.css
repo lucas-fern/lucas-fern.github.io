@@ -5,6 +5,11 @@
     width: 25%;
 }
 
+.inline-icons {
+    float: right;
+    margin: 5px 5px 5px 5px;
+}
+
 .UoM {
     color: #0071e9;
 }
@@ -38,4 +43,8 @@
 
 .white {
     color: #DFE3E8;
+}
+
+.indented {
+    margin-left: 40px;
 }

@@ -61,7 +61,9 @@ html {
 }
 
 body {
-  color: #515151;
+  color: #DFE3E8;
+  font-weight: 300;
+  font-size: 0.9rem;
   background-color: #2E343E;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -160,7 +162,10 @@ pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
 code {
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: #333A45;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 pre {
   display: block;
@@ -179,7 +184,7 @@ pre code {
   padding: 1em;
   font-size: 100%;
   color: inherit;
-  background-color:  #333A45;
+  background-color: #333A45;
 }
 
 /* Pygments via Jekyll */
@@ -230,9 +235,10 @@ blockquote p:last-child {
   }
 }
 
+.content
 img {
   display: block;
-  max-width: 100%;
+  max-width: 90%;
   margin: 15px 15px 15px 15px;
   border-radius: 5px;
 }

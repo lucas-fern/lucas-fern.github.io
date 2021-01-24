@@ -75,11 +75,6 @@ html {
   color: #F44C7F;
 }
 
-.inline-icons {
-  float: right;
-  margin: 5px;
-}
-
 /* About section */
 .sidebar-about h1 {
   color: #939EAE;
@@ -135,7 +130,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 45rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
