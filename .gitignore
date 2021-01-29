@@ -3,9 +3,6 @@ _gh_pages
 _site
 .ruby-version
 
-# Ignore unlisted posts
-unlisted
-
 # Numerous always-ignore extensions
 *.diff
 *.err
