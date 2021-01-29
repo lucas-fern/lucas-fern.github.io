@@ -9,7 +9,11 @@ title: Spinner
 <body>
     <blockquote> I was looking to practice animating HTML elements with javascript and CSS and thought this was a good little project that used an elegant solution to rotating and colouring the 8 individual sectors of the wheel. </blockquote>
     <h2> Instructions </h2>
-    Probably don't need to spell out that you press the button in the middle to <strong> spin </strong> the wheel. You can also press this to <button class="name-generator" onclick="set_names()"> Set Random Names </button>
+    <ul>
+        <li> Probably don't need to spell out that you press the button in the middle to <strong> spin </strong> the wheel. </li>
+        <li> And heres a button to <button class="inline-button name-generator" onclick="set_names()"> Set Random Names </button> </li>
+    </ul>
+     
 
     <div id="mainbox" class="mainbox">
         <div id="box" class="box">
@@ -29,9 +33,22 @@ title: Spinner
         <button class="spin" onclick="spin_spinner()">SPIN</button>
     </div>
 
-    <h2> Code </h2>
+    <h1> Code Overview </h1>
     <div>
-I pretty much just start with 8 coloured sectors all at the top:
+For a wheel with 8 sectors, we want to create our slices from triangles with one interior angle of \( \frac{360}{8} = 45° \). With some simple trigenometry we get the following <code>clip-path</code>s, though the angle doesn't need to be exact using trig provides a simple way to extend this to wheels with more or less sectors.
+{% highlight css %}
+{% raw %}
+.orange-slice {
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: #FF5733;
+}
+.yellow-slice {
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: #FFC300;
+}
+{% endraw %}
+{% endhighlight %}
+I then add 4 of each of the coloured sectors with classes corresponding to their colour and direction. This would have to be done programatically to most easily vary the amount of pieces.
 {% highlight HTML %}
 <div class="oranges">
     <span class="slice orange-slice up"><p class="name"> </p></span>
@@ -46,19 +63,7 @@ I pretty much just start with 8 coloured sectors all at the top:
     <span class="slice yellow-slice left"><p class="name"> </p></span>
 </div>
 {% endhighlight %}
-{% highlight css %}
-{% raw %}
-.orange-slice {
-    clip-path: polygon(50% 100%, 92% 0, 8% 0);
-    background-color: #FF5733;
-}
-.yellow-slice {
-    clip-path: polygon(50% 100%, 92% 0, 8% 0);
-    background-color: #FFC300;
-}
-{% endraw %}
-{% endhighlight %}
-use the HTML class with the direction to control the rotation:
+Then the HTML classes encoding the direction can be used to control the position and rotation.
 {% highlight css %}
 {% raw %}
 .up {
@@ -82,7 +87,7 @@ use the HTML class with the direction to control the rotation:
 }
 {% endraw %}
 {% endhighlight %}
-and rotate the <code>yellows</code> div 45° clockwise:
+and the <code>yellows</code> div gets rotated an extra 45° clockwise to correctly offset the segments from the oranges.
 {% highlight css %}
 {% raw %}
 .yellows{
@@ -92,7 +97,7 @@ and rotate the <code>yellows</code> div 45° clockwise:
 }
 {% endraw %}
 {% endhighlight %}
-To do the spinning we just pick a large random angle, rotate the <code>box</code> containing the spinner with css, and toggle the animation property.
+To do the spinning we just pick a large random angle, rotate the box containing the spinner with css, and toggle the animation property.
 {% highlight javascript %}
 {% raw %}
 function spin_spinner() {
@@ -113,12 +118,12 @@ function spin_spinner() {
 }
 {% endraw %}
 {% endhighlight %}
+If you're interested in more of the code feel free to inspect the page, I included the javascript directly so you can easily use, modify, and extend the element for your own purposes.
     </div>
 
 
 <script>
-var NAMES = ["Liam", "Noah", "Oliver", "Steve 😍", "Elijah", "James", "Benjamin", "Lucas", "Mason", "Ethan", "Alexander", "Henry", "Jacob", "Michael", "Daniel", "Logan", "Jackson", "Sebastian", "Jack", "Aiden", "Olivia", "Emma", "Ava", "Sophia", "Isabella", "Charlotte", "Amelia", "Kerry 😍", "Harper", "Evelyn", "Abigail", "Emily", "Ella", "Elizabeth", "Natalie 😍", "Luna", "Sofia", "Avery", "Mila", "Aria"]
-var comedy_spin = false;
+var NAMES = ["Liam", "Noah", "Oliver", "Steve", "Elijah", "James", "Benjamin", "Lucas", "Mason", "Ethan", "Alexander", "Henry", "Jacob", "Michael", "Daniel", "Logan", "Jackson", "Sebastian", "Jack", "Aiden", "Olivia", "Emma", "Ava", "Sophia", "Isabella", "Charlotte", "Amelia", "Kerry", "Harper", "Evelyn", "Abigail", "Emily", "Ella", "Elizabeth", "Natalie", "Luna", "Sofia", "Avery", "Mila", "Aria"]
 var current_angle = 0;
 
 function set_names() {
@@ -129,18 +134,6 @@ function set_names() {
         current_name = NAMES[Math.floor(Math.random() * NAMES.length)];
         spinner_names[i].innerHTML = current_name;
     }
-}
-
-function set_premium_comedy_names() {
-    var spinner_names = document.getElementsByClassName("name");
-
-    for (var i = 0; i < spinner_names.length; i++) {
-        spinner_names[i].innerHTML = ["💦", "my", "is", "👅", "rim", "on", "Steve", "👌"][i];
-    }
-}
-
-function toggle_premium_comedy_spin() {
-    comedy_spin = !comedy_spin;
 }
 
 function spin_spinner() {
@@ -158,10 +151,6 @@ function spin_spinner() {
     setTimeout(function(){
         element.classList.add('animate');
     }, 5000);  // 5 seconds
-
-    if (comedy_spin) { 
-        setTimeout(() => { set_premium_comedy_names(); }, 1000); 
-    }
 }
 
 set_names()

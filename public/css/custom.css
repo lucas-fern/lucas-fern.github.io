@@ -50,3 +50,22 @@
 .indented {
     margin-left: 40px;
 }
+
+/* Buttons */
+.inline-button {
+    transition-duration: 0.2s;
+    border: none;
+    color: #2E343E;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 3px;
+    padding-bottom: 2px;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.inline-button:hover {
+    background-color: #F44C7F;
+    color: #DFE3E8;
+}
