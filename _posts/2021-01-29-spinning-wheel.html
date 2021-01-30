@@ -63,25 +63,25 @@ I then add 4 of each of the coloured sectors with classes corresponding to their
     <span class="slice yellow-slice left"><p class="name"> </p></span>
 </div>
 {% endhighlight %}
-Then the HTML classes encoding the direction can be used to control the position and rotation.
+Then the HTML classes encoded with the direction can be used to control the position and rotation. We use percentages for mobile responsiveness.
 {% highlight css %}
 {% raw %}
 .up {
     top: 0px;
-    left: 120px;
+    left: 25%;
 }
 .right {
-    top: 120px;
+    top: 25%;
     right: 0;
     transform: rotate(90deg);
 }
 .down {
     bottom: 0;
-    left: 120px;
+    left: 25%;
     transform: rotate(180deg);
 }
 .left {
-    top: 120px;
+    top: 25%;
     left: 0;
     transform: rotate(270deg);
 }

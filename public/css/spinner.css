@@ -1,20 +1,20 @@
 .mainbox {
     background-color: #333A45;
     position: relative;
-    width: 540px;
-    height: 540px;
+    width: 25rem;
+    height: 25rem;
     margin: auto;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 1rem;
+    padding: 1rem;
     border-radius: 20px;
 }
 .mainbox:after {
     position: absolute;
     content: '';
-    width: 32px;
-    height: 32px;
+    width: 1.5rem;
+    height: 1.5rem;
     background: url('/res/right-arrow.png') no-repeat;
-    background-size: 32px;
+    background-size: 1.5rem;
     left: -5px;
     top: 50%;
     transform: translateY(-50%);
@@ -44,20 +44,20 @@
 }
 .up {
     top: 0px;
-    left: 120px;
+    left: 25%;
 }
 .right {
-    top: 120px;
+    top: 25%;
     right: 0;
     transform: rotate(90deg);
 }
 .down {
     bottom: 0;
-    left: 120px;
+    left: 25%;
     transform: rotate(180deg);
 }
 .left {
-    top: 120px;
+    top: 25%;
     left: 0;
     transform: rotate(270deg);
 }
@@ -69,8 +69,8 @@
 
 .slice p{
     color: #2E343E;
-    padding-right: 40px;
-    font-size: 26px;
+    padding-right: 2.5rem;
+    font-size: 1.2rem;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -83,15 +83,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75px;
-    height: 75px;
+    width: 15%;
+    height: 15%;
     border-radius: 50%;
     border: 4px solid #fff;
     background-color: #ff5722;
     color: #fff;
     box-shadow: 0 5px 20px #000;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1rem;
     cursor: pointer;
 }
 .spin:active{
