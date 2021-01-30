@@ -1,0 +1,49 @@
+.portrait {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  width: 25%;
+}
+
+.UoM {
+  color: #0071E9;
+}
+
+.follows-heading {
+  margin-top: -0.5rem;
+}
+
+#UoM-Logo {
+  float: left;
+  margin: 0px;
+  margin-right: 15px;
+  margin-top: -10px;
+  margin-left: -15px;
+  width: 4.5rem;
+}
+
+.date {
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: 0rem;
+  color: #919CAC;
+  font-weight: 300;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#jun-eng {
+  color: #FF9933;
+}
+
+.white {
+  color: #DFE3E8;
+}
+
+.indented {
+  margin-left: 40px;
+}
+
+/*# sourceMappingURL=about.css.map */

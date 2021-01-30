@@ -1,3 +1,8 @@
+/* 
+Syntax highlighting from mgyongyosi on GitHub (https://github.com/mgyongyosi/OneDarkJekyll)
+Uses colours from my favourite Atom One Dark Pro theme.
+*/
+
 .highlight,pre
 .highlight{background: transparent;color:#abb2bf}
 .highlight pre{background:transparent}
