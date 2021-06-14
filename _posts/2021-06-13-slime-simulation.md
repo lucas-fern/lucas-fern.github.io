@@ -16,6 +16,10 @@ title: Slime Simulation
   clear: both;
   display: table;
 }
+
+.video-container { position: relative; padding-bottom: 56.25%; padding-top: 10px; height: 0; overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 </style>
 </head>
 
@@ -32,9 +36,9 @@ I recently watched a mesmerising video by [Sebastian Lague](https://www.youtube.
 
 <center> <strong> See some more results, and how the slime explores a maze <a href="#results">in the results section below.</a> </strong> </center> <br>
 
-<center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X-iSQQgOd1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/X-iSQQgOd1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></center><br>
 
-I strongly recommend the entire video above, but some example simulations are shown from _14:07_, and in this post I'll explore how I added the ability to include obstacles in the simulation and have the slime navigate around them to solve mazes and explore new environments.
+I can strongly recommend the entire video above, but some example simulations are shown from _14:07_, and in this post I'll explore how I added the ability to include obstacles in the simulation and have the slime navigate around them to solve mazes and explore new environments.
 
 > My additions to the code can be found [here on my GitHub](https://github.com/lucas-fern/Slime-Simulation) in case you wanted to create your own simulations with obstacles.
 
