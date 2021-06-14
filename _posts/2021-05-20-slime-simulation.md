@@ -2,7 +2,7 @@
 layout: post
 title: Slime Simulation
 ---
-<center> ![Slime Mould Explosion from Centre](res/slime-sim/explosion.gif) </center>
+![Slime Mould Explosion from Centre](res/slime-sim/explosion.gif)
 
 I recently watched a mesmerising video by [Sebastian Lague](https://www.youtube.com/channel/UCmtyQOKKmrMVaKuRXz02jbQ) where he begins by exploring the Travelling Salesman Problem, and ends up developing a beautiful algorithm to simulate the complex behaviour of slime moulds using compute shaders in Unity. Performing the simulation in a shader allows the calculations to be parallelised on the GPU, and having recently upgraded mine I was extremely interested to make an extension to this wonderful program.
 
