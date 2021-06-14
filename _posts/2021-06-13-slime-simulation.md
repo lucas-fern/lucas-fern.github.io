@@ -21,10 +21,10 @@ title: Slime Simulation
 
 <div class="imgrow">
   <div class="imgcolumn">
-    <img src="res/slime-sim/explosion.gif" alt="Slime Mould Explosion" style="width:100%">
+    <img src="/res/slime-sim/explosion.gif" alt="Slime Mould Explosion" style="width:100%">
   </div>
   <div class="imgcolumn">
-    <img src="res/slime-sim/spaghetti.gif" alt="Spaghettified Slime Mould" style="width:100%">
+    <img src="/res/slime-sim/spaghetti.gif" alt="Spaghettified Slime Mould" style="width:100%">
   </div>
 </div>
 
@@ -63,7 +63,7 @@ My motivation to look into this project was to see how slimes with different pro
 
 <center>
 <figure>
-<img src="res/slime-sim/maze.png" alt="Example Maze" style="width:50%">
+<img src="/res/slime-sim/maze.png" alt="Example Maze" style="width:50%">
 <figcaption>An example maze, where the slime spawns in the centre.</figcaption>
 </figure>
 </center>
@@ -110,11 +110,11 @@ These images, as shown at the top, are simulations without obstacles, using diff
 
 <center>
 <figure>
-<img src="res/slime-sim/spaghetti.gif" alt="Spaghettified Slime Mould" style="width:75%">
+<img src="/res/slime-sim/spaghetti.gif" alt="Spaghettified Slime Mould" style="width:75%">
 <figcaption>Slimes with a high tendency to follow right behind others due to a narrow field of vision. Initialised randomly in the map.</figcaption>
 </figure>
 <figure>
-<img src="res/slime-sim/explosion.gif" alt="Slime Mould Explosion" style="width:75%">
+<img src="/res/slime-sim/explosion.gif" alt="Slime Mould Explosion" style="width:75%">
 <figcaption>One million slime cells initialised facing outward from a point in the centre.</figcaption>
 </figure>
 </center>
@@ -123,15 +123,15 @@ By uploading an image file with my initials I achieved what I think is an really
 
 <center>
 <figure>
-<img src="res/slime-sim/pink-point-LF-inverted.png" alt="Pink LF Slime" style="width:75%">
+<img src="/res/slime-sim/pink-point-LF-inverted.png" alt="Pink LF Slime" style="width:75%">
 <figcaption>Inverting the colours on a green slime gave a bright image which I thought was an interesting <a href="https://www.linkedin.com/in/lucas-fern/">cover image</a></figcaption>
 </figure>
 <div class="imgrow">
   <div class="imgcolumn">
-    <img src="res/slime-sim/white-point-LF.png" alt="White Slime LF" style="width:100%">
+    <img src="/res/slime-sim/white-point-LF.png" alt="White Slime LF" style="width:100%">
   </div>
   <div class="imgcolumn">
-    <img src="res/slime-sim/white-point-LF-inverted.png" alt="Black Slime LF on White" style="width:100%">
+    <img src="/res/slime-sim/white-point-LF-inverted.png" alt="Black Slime LF on White" style="width:100%">
   </div>
 </div>
 </center>
@@ -140,11 +140,11 @@ And finally, putting a few slimes into the maze:
 
 <center>
 <figure>
-<img src="res/slime-sim/blue-maze-explorer.gif" alt="Blue explorer slime" style="width:75%">
+<img src="/res/slime-sim/blue-maze-explorer.gif" alt="Blue explorer slime" style="width:75%">
 <figcaption>A blue slime with a high affinity for other cells.</figcaption>
 </figure>
 <figure>
-<img src="res/slime-sim/red-maze.gif" alt="Red filling slime" style="width:75%">
+<img src="/res/slime-sim/red-maze.gif" alt="Red filling slime" style="width:75%">
 <figcaption>A fast red slime which quickly generates a sort of heat map as it quickly populates the entire space.</figcaption>
 </figure>
 </center>
