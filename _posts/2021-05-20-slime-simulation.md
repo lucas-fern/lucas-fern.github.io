@@ -3,8 +3,6 @@ layout: post
 title: Slime Simulation
 ---
 
-
-
 <head>
 <style>
 .imgcolumn {
@@ -38,3 +36,20 @@ I can strongly recommend the entire video above, but some example simulations ar
 
 > My additions to the code can be found [here on my GitHub](https://github.com/lucas-fern/Slime-Simulation) in case you wanted to create your own simulations with obstacles.
 
+## Method for Adding Obstacles
+To make the simulated slime navigate an obstacle requires us to change the behaviour of the slime such that it can never move into certain areas of the window. I will cover how we define the obstacles in the next section, but to make it so that the slimes are obstructed simply requires implementing a function in the `.compute` shader file to check if a specific part of the map is blocked, and then consider this when moving the slime cells.
+
+This is the addition to the movement code of the slime cells, which is run in parallel for each of the millions of cells. It checks whether each of the cells is within a wall, and rotates them randomly in place if they are.
+
+{% highlight C %}
+...
+else if (InBlocked(newPos)) {
+	random = hash(random);
+	float randomAngle = scaleToRange01(random) * 2 * 3.1415;
+
+	newPos.x = pos.x;
+	newPos.y = pos.y;
+	agents[id.x].angle = 0.5 * randomAngle;
+}
+...
+{% endhighlight %}
