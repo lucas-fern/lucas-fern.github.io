@@ -36,14 +36,14 @@ I can strongly recommend the entire video above, but some example simulations ar
 
 > My additions to the code can be found [here on my GitHub](https://github.com/lucas-fern/Slime-Simulation) in case you wanted to create your own simulations with obstacles.
 
-See some more results, and how the slime explores a maze <a href="#results">in the results section below.</a>
+<center> <strong> See some more results, and how the slime explores a maze <a href="#results">in the results section below.</a> </strong> </center>
 
 ## Method for Adding Obstacles
 To make the simulated slime navigate an obstacle requires us to change the behaviour of the slime such that it can never move into certain areas of the window. I will cover how we define the obstacles in the next section, but to make it so that the slimes are obstructed simply requires implementing a function in the `.compute` shader file to check if a specific part of the map is blocked, and then consider this when moving the slime cells.
 
 This is the addition to the movement code of the slime cells, which is run in parallel for each of the millions of cells. It checks whether each of the cells is within a wall, and rotates them randomly in place if they are.
 
-{% highlight glsl %}
+{% highlight c# %}
 ...
 
 else if (InBlocked(newPos)) {
@@ -71,6 +71,7 @@ My motivation to look into this project was to see how slimes with different pro
 I wrote a simple Python program to generate the `.compute` shader with obstacles as defined in a given image.
 
 {% highlight python %}
+{% raw %}
 import cv2
 
 img_name = 'name'
@@ -95,6 +96,7 @@ with open(img_name + '.txt', 'w') as f:
         if idx != rows - 1:
             print(',', file=f)
     print('};', file=f)
+{% endraw %}
 {% endhighlight %}
 
 Of course this wouldn't be the ideal method for a scalable solution, but worked perfectly for this quick experiment.
@@ -108,11 +110,11 @@ These images, as shown at the top, are simulations without obstacles, using diff
 
 <center>
 <figure>
-<img src="res/slime-sim/spaghetti.gif" alt="Spaghettified Slime Mould" style="width:50%">
+<img src="res/slime-sim/spaghetti.gif" alt="Spaghettified Slime Mould" style="width:75%">
 <figcaption>Slimes with a high tendency to follow right behind others due to a narrow field of vision. Initialised randomly in the map.</figcaption>
 </figure>
 <figure>
-<img src="res/slime-sim/explosion.gif" alt="Slime Mould Explosion" style="width:50%">
+<img src="res/slime-sim/explosion.gif" alt="Slime Mould Explosion" style="width:75%">
 <figcaption>One million slime cells initialised facing outward from a point in the centre.</figcaption>
 </figure>
 </center>
@@ -121,8 +123,8 @@ By uploading an image file with my initials I achieved what I think is an really
 
 <center>
 <figure>
-<img src="res/slime-sim/pink-point-LF-inverted.png" alt="Pink LF Slime" style="width:50%">
-<figcaption>Inverting the colours on a green slime gave a bright image which made an interesting cover <a href="https://www.linkedin.com/in/lucas-fern/">image</a></figcaption>
+<img src="res/slime-sim/pink-point-LF-inverted.png" alt="Pink LF Slime" style="width:75%">
+<figcaption>Inverting the colours on a green slime gave a bright image which I thought was an interesting <a href="https://www.linkedin.com/in/lucas-fern/">cover image</a></figcaption>
 </figure>
 <div class="imgrow">
   <div class="imgcolumn">
@@ -138,13 +140,13 @@ And finally, putting a few slimes into the maze:
 
 <center>
 <figure>
-<img src="res/slime-sim/blue-maze-explorer.gif" alt="Blue explorer slime" style="width:50%">
-<figcaption>A blue slime with a high affinity for other cells.</a></figcaption>
+<img src="res/slime-sim/blue-maze-explorer.gif" alt="Blue explorer slime" style="width:75%">
+<figcaption>A blue slime with a high affinity for other cells.</figcaption>
 </figure>
 <figure>
-<img src="res/slime-sim/red-maze.gif" alt="Red filling slime" style="width:50%">
-<figcaption>A fast red slime which quickly populates the entire space.</a></figcaption>
+<img src="res/slime-sim/red-maze.gif" alt="Red filling slime" style="width:75%">
+<figcaption>A fast red slime which quickly generates a sort of heat map as it quickly populates the entire space.</figcaption>
 </figure>
 </center>
 
-_Though these_ `gif`_s have been made a reasonable file size to load well on the site I am able to generate the simulations in real time at 4k. I strongly recommend playing around with the project, making a few slimes and exploring other ideas as a first introduction to Unity and GPU computing._
+> Though these `gif`s have been made a reasonable file size to load well on the site I am able to generate the simulations in real time at 4K resolution. I can highly recommend playing around with this project, making a few slimes and exploring other ideas as an introduction to Unity and GPU computing.

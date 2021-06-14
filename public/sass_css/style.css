@@ -130,6 +130,11 @@ p {
   font-weight: 300;
 }
 
+figcaption {
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
