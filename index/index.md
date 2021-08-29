@@ -5,8 +5,10 @@ title: Index
 
 <ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    {% if post.hidden != true %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
