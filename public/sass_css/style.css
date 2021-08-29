@@ -112,6 +112,10 @@ h2 {
   font-size: 1.25rem;
 }
 
+h3, h4, h5, h6 {
+  color: #DFE3E8;
+}
+
 h3 {
   margin-top: 1rem;
   font-size: 1.1rem;
