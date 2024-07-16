@@ -1,6 +1,10 @@
 # Run Project
 
-### 1. Clone the project
+### 1. Clone the project and install
+
+```shell
+npm install
+```
 
 ### 2. Run the project
 
@@ -17,6 +21,6 @@ npm run build
 
 # Updating
 
-- [ ] Update content in `public` on `main` branch
+- [ ] Update content in `public` and `src` on `main` branch
 - [ ] Update `meta description` in the head of `public/index.html`
 - [ ] `npm run build` and move the contents of `build` to the `gh-pages` branch
