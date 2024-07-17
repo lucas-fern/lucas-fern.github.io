@@ -23,4 +23,4 @@ npm run build
 
 - [ ] Update content in `public` and `src` on `main` branch
 - [ ] Update `meta description` in the head of `public/index.html`
-- [ ] `npm run build` and move the contents of `build` to the `gh-pages` branch
+- [ ] Push changes to `main`, GitHub actions should then publish the site to the `gh-pages` branch

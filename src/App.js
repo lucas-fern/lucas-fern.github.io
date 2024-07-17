@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import Header from './Components/Header';
 
 const Home = () => {
     const data = {
